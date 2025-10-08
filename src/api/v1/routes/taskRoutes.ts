@@ -1,9 +1,9 @@
 import express, { Router } from "express";
-import { createTasks } from "../controllers/taskController";
+import { createTask } from "../controllers/taskController";
 import { validateCreateTasks } from "../validation/tasksValidation";
 
 const router: Router = express.Router();
 
-router.post("/", validateCreateTasks, createTasks);
+router.post("/", validateCreateTasks, createTask);
 
 export default router;
